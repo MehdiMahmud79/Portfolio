@@ -8,7 +8,7 @@ import CV from "./cv.pdf";
 import "./home.css";
 const Home = () => {
   return (
-    <div className=" container mx-auto shadow-lg my-2 bg-gray-200 text-center rounded-3xl mt-4">
+    <div className=" container mx-auto shadow-lg my-2 bg-gray-200 text-center rounded-3xl mt-4 h-100">
       <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center">
         {/* <!-- this section is about me --> */}
         <p className="md:text-3xl ">
