@@ -25,20 +25,20 @@ const Footer = () => {
         <div className="fs-5">
           <a
             href="https://www.researchgate.net/profile/Mehdi-Mahmud"
-            className="mx-4  text-decoration-none"
+            className="mx-4  text-decoration-none hover:text-red-600"
           >
             <i className="fab fa-researchgate"></i>
           </a>
 
           <a
             href="https://www.linkedin.com/in/mehdi-mahmud/"
-            className="mx-4  text-decoration-none"
+            className="mx-4  text-decoration-none hover:text-red-600"
           >
             <i class="fab fa-linkedin"></i>
           </a>
           <a
             href="https://github.com/mehdimahmud79"
-            className="mx-4  text-decoration-none"
+            className="mx-4  text-decoration-none hover:text-red-600"
           >
             <i className="fab fa-github"></i>
           </a>
