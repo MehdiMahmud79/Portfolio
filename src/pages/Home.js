@@ -45,17 +45,22 @@ const Home = () => {
               will be completed in November 2021.
             </p>
           </div>
-          <Link
-            target="_blank"
-            class="px-4 py-2 bg-red-800 text-red-100 rounded-xl"
-            to={CV}
-          >
-            <i class="fa fa-download  text-gray-400" aria-hidden="true"></i>{" "}
-            Higher Me
-            <span class="position-relative top-10 start-100 translate-middle  rounded-full p-1 m-2 bg-yellow-400 text-gray-800 hover:bg-red-900 hover:text-red-100">
-              CV
-            </span>
-          </Link>
+          <div className="flex-auto items-center  justify-self-center m-2">
+            <Link
+              target="_blank"
+              className="flex-1 px-4 py-2 bg-red-800 text-red-100 rounded-xl"
+              to={CV}
+            >
+              <i
+                className="fa fa-download  text-gray-400"
+                aria-hidden="true"
+              ></i>{" "}
+              Higher Me
+              <span className="position-relative top-10 start-100 translate-middle  rounded-full p-1 m-2 bg-yellow-400 text-gray-800 hover:bg-red-900 hover:text-red-100">
+                CV
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
