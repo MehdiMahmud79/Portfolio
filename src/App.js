@@ -3,11 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import "@material-tailwind/react/tailwind.css";
-import Button from "@material-tailwind/react/Button";
 
 import Header from "./components/Header";
-import OtherSkills from "./components/OtherSkills";
-import Skills from "./components/Skills";
 
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -18,10 +15,6 @@ function App() {
   return (
     <Router>
       <Header />
-      <OtherSkills />
-      <Button color="lightBlue" ripple="light">
-        Skills: <Skills />
-      </Button>
 
       <Routes>
         <Route exact={true} path="/" element={<Home />} />
