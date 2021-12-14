@@ -19,13 +19,21 @@ const Contact = () => {
       </div>{" "}
       <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2 ">
         <i className="fas fa-at  "> </i> Email:{" "}
-        <a href="mailto:mehdi.mahmud@hotmail.com " className="text-yellow-600">
+        <a
+          href="mailto:mehdi.mahmud@hotmail.com "
+          className="text-yellow-600"
+          target="_blank"
+        >
           mehdi.mahmud@hotmail.com
         </a>
       </div>
       <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
         <i className="fab fa-github  "> </i> Github:{" "}
-        <a href="https://github.com/mehdimahmud79" className="text-yellow-600">
+        <a
+          href="https://github.com/mehdimahmud79"
+          className="text-yellow-600"
+          target="_blank"
+        >
           mehdimahmud79
         </a>
       </div>
@@ -34,6 +42,7 @@ const Contact = () => {
         <a
           href="https://www.linkedin.com/in/mehdi-mahmud/"
           className="text-yellow-600"
+          target="_blank"
         >
           mehdi-mahmud
         </a>

@@ -24,6 +24,7 @@ const SingleCard = ({ data }) => {
 
         <div className="absolute top-0 left-0 w-full bg-blue-900   text-blue-200 flex justify-between px-4 py-1 rounded-t-3xl ">
           <a
+            target="_blank"
             type="button"
             href={data.gitHub_Url}
             className=" text-decoration-none hover:text-red-600"
@@ -37,6 +38,7 @@ const SingleCard = ({ data }) => {
             />
           </div>
           <a
+            target="_blank"
             type="button"
             href={data.homepage}
             className=" text-decoration-none hover:text-red-600 "
