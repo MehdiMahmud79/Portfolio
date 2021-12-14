@@ -4,80 +4,25 @@ import { Link } from "react-router-dom";
 import profileImage from "../images/profile.jpg";
 import Skills from "../components/Skills";
 import CV from "./cv.pdf";
-
+import { fetchApi } from "../utils/fetchProjects";
+import SingleCard from "../components/SingleCard";
 import "./home.css";
+import spinner from "../images/spinner.gif";
+
 const Home = () => {
-  const log = console.log;
-  var projects = [];
-  var user = "MehdiMahmud79";
-  const projectsUrl = `https://api.github.com/users/${user}/repos`;
+  const projectsUrl = `https://api.github.com/users/MehdiMahmud79/repos`;
+  const [mydata, setdata] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(async () => {
+    const data = await fetchApi(projectsUrl);
+    setdata(data);
+    setLoading(false);
+  }, []);
 
-  const fetchApi = async (url) => {
-    try {
-      let projectData = await fetch(url);
-      const data = await projectData.json();
-      return data;
-    } catch (err) {
-      console.error(`Error: ${err}`);
-    }
-  };
-
-  const portfolioMaker = async (projectsUrl) => {
-    const Data = await fetchApi(projectsUrl);
-    const projectsData = Data.sort((a, b) =>
-      a.created_at < b.created_at ? 1 : b.created_at < a.created_at ? -1 : 0
-    );
-    log("Your projects on Gitgub were \n", projectsData);
-
-    projects = await projectsData.map(
-      async ({
-        name: projectName,
-        owner,
-        description,
-        languages_url,
-        homepage,
-      }) => {
-        if (!homepage)
-          homepage = `https://${owner.login}.github.io/${projectName}/`;
-        const gitHub_Url = `${owner.html_url}/${projectName}`;
-        const project_img = `https://github.com/${owner.login}/${projectName}/blob/main/assets/screen.gif?raw=true`;
-
-        const languages = await fetchApi(languages_url);
-
-        return {
-          projectName,
-          gitHub_Url,
-          homepage,
-          description,
-          project_img,
-          languages,
-        };
-      }
-    );
-
-    projects = await Promise.all(projects);
-    log(projects);
-    // finned pinned Repos
-    const pinnedUrl = `https://gh-pinned-repos-5l2i19um3.vercel.app/?username=${user}`;
-    const pinnedRepos = await fetchApi(pinnedUrl);
-    // log("pinned repos are ",pinnedRepos)
-    const pinned = pinnedRepos.map((proj) => proj.repo);
-
-    let favProject = projects.filter((repo) =>
-      pinned.includes(repo.projectName)
-    );
-    log("pinned repos are ", favProject);
-
-    let oldProjects = projects.filter(
-      (repo) => !pinned.includes(repo.projectName)
-    );
-    log("older repos are ", oldProjects);
-  };
-  portfolioMaker(projectsUrl);
- 
+  console.log(mydata.favProjects);
   return (
     <div className=" container mx-auto shadow-lg my-2 bg-gray-200 text-center rounded-3xl mt-4 h-100">
-      <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center">
+      <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center rounded-b-full">
         {/* <!-- this section is about me --> */}
         <p className="md:text-3xl ">
           <i className="fas fa-user-graduate text-gray-700 px-2"></i>
@@ -130,6 +75,29 @@ const Home = () => {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center my-10 rounded-b-full">
+        {/* <!-- this section is about me --> */}
+        <p className="md:text-3xl ">
+          <i className="fas fa-user-graduate text-gray-700 px-2"></i>
+          Projects
+        </p>
+        <hr className="w-48 m-auto" />
+        <p className="md:text-lg  text-center text-gray-700 pt-2">
+          <i className="fas fa-angle-double-left"></i> Recent Projects{" "}
+          <i className="fas fa-angle-double-right"></i>
+        </p>
+      </div>
+      <div className="flex flex-wrap justify-center bg-gray-100 m-2 p-2 rounded-xl shadow-md">
+        {loading ? (
+          <div>
+            <img src={spinner} alt="" />
+          </div>
+        ) : (
+          mydata.favProjects.map((project) => {
+            return <SingleCard key={project.projectName} />;
+          })
+        )}
       </div>
     </div>
   );
