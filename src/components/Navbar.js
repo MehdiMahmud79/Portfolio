@@ -35,8 +35,8 @@ export default function MainNavbar() {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "active font-bold px-2 hover:text-green-600"
-                : "px-2 hover:text-green-600"
+                ? "text-blue-100 font-bold p-2 px-4 mx-2 hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-green-600 shadow-lg"
+                : " hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-blue-200 p-2 px-4 shadow-lg mx-2"
             }
           >
             <i className="fas fa-home text-xl  cursor-pointer"></i> Home
@@ -46,8 +46,8 @@ export default function MainNavbar() {
             to="/profile"
             className={({ isActive }) =>
               isActive
-                ? "active font-bold px-2 hover:text-green-600"
-                : "px-2 hover:text-green-600"
+                ? "text-blue-100 font-bold p-2 px-4 mx-2 hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-green-600 shadow-lg"
+                : " hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-blue-200 p-2 px-4 shadow-lg mx-2"
             }
           >
             <i className="fas fa-user text-xl cursor-pointer"></i> Profile
@@ -57,8 +57,8 @@ export default function MainNavbar() {
             to="/projects"
             className={({ isActive }) =>
               isActive
-                ? "active font-bold px-2 hover:text-green-600"
-                : "px-2 hover:text-green-600"
+                ? "text-blue-100 font-bold p-2 px-4 mx-2 hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-green-600 shadow-lg"
+                : " hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-blue-200 p-2 px-4 shadow-lg mx-2"
             }
           >
             <i className="fas fa-laptop-code text-xl  cursor-pointer"></i>{" "}
@@ -69,8 +69,8 @@ export default function MainNavbar() {
             to="/contact"
             className={({ isActive }) =>
               isActive
-                ? "active font-bold px-2 hover:text-green-600"
-                : "px-2 hover:text-green-600"
+                ? "text-blue-100 font-bold p-2 px-4 mx-2 hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-green-600 shadow-lg"
+                : " hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-blue-200 p-2 px-4 shadow-lg mx-2"
             }
           >
             <i className="fas fa-envelope-open-text text-xl  cursor-pointer"></i>{" "}
