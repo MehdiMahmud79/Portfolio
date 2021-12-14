@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="mx-5 ">
           <p className="text-lg">Get connected with me on social networks:</p>
         </div>
-        <div className="fs-5">
+        <div className="text-3xl">
           <a
             target="_blank"
             href="https://www.researchgate.net/profile/Mehdi-Mahmud"
