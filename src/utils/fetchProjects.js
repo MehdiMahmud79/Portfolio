@@ -18,11 +18,12 @@ export const fetchApi = async (projectsUrl) => {
   const projectsData = Data.sort((a, b) =>
     a.created_at < b.created_at ? 1 : b.created_at < a.created_at ? -1 : 0
   );
-  //   log("Your projects on Gitgub were \n", projectsData);
+  // log("Your projects on Gitgub were \n", projectsData);
 
   projects = await projectsData.map(
     async ({
       name: projectName,
+      created_at,
       owner,
       description,
       languages_url,
@@ -37,6 +38,7 @@ export const fetchApi = async (projectsUrl) => {
 
       return {
         projectName,
+        created_at,
         gitHub_Url,
         homepage,
         description,

@@ -17,7 +17,7 @@ const Header = () => {
     if (!mydata) return;
     // console.log("all", mydata.projects);
     const Projects = mydata.projects.map((project) => {
-      return project.projectName;
+      return project.projectName + " | " + project.created_at.split("T")[0];
     });
     setMyProjects(Projects);
   }, [loading]);
@@ -35,7 +35,7 @@ const Header = () => {
             <p className="bg-green-400 p-2 mx-1 rounded-xl whitespace-no-wrap">
               {" "}
               <i className="fas fa-project-diagram 0 text-yellow-900 p-2"></i>
-              {myProjects.join("+")}
+              {myProjects[index % myProjects.length]}
             </p>
           </div>
         )}
