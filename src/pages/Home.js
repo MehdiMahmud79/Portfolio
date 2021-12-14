@@ -88,7 +88,7 @@ const Home = () => {
           <i className="fas fa-angle-double-right"></i>
         </p>
       </div>
-      <div className="flex flex-wrap justify-center bg-gray-100 m-2 gap-4  p-2 rounded-xl shadow-md ">
+      <div className="flex flex-wrap justify-center bg-gray-100  gap-4  p-2 rounded-xl shadow-md my-10 ">
         {loading ? (
           <div>
             <img src={spinner} alt="" />
