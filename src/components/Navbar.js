@@ -33,21 +33,33 @@ export default function MainNavbar() {
           <NavLink
             exact="true"
             to="/"
-            className={({ isActive }) => (isActive ? "active" : "")}
+            className={({ isActive }) =>
+              isActive
+                ? "active font-bold px-2 hover:text-green-600"
+                : "px-2 hover:text-green-600"
+            }
           >
             <i className="fas fa-home text-xl  cursor-pointer"></i> Home
           </NavLink>
           <NavLink
             exact="true"
             to="/profile"
-            className={({ isActive }) => (isActive ? "active" : "")}
+            className={({ isActive }) =>
+              isActive
+                ? "active font-bold px-2 hover:text-green-600"
+                : "px-2 hover:text-green-600"
+            }
           >
             <i className="fas fa-user text-xl cursor-pointer"></i> Profile
           </NavLink>
 
           <NavLink
             to="/projects"
-            className={({ isActive }) => (isActive ? "active" : "")}
+            className={({ isActive }) =>
+              isActive
+                ? "active font-bold px-2 hover:text-green-600"
+                : "px-2 hover:text-green-600"
+            }
           >
             <i className="fas fa-laptop-code text-xl  cursor-pointer"></i>{" "}
             Projects
@@ -55,7 +67,11 @@ export default function MainNavbar() {
           <NavLink
             exact="true"
             to="/contact"
-            className={({ isActive }) => (isActive ? "active" : "")}
+            className={({ isActive }) =>
+              isActive
+                ? "active font-bold px-2 hover:text-green-600"
+                : "px-2 hover:text-green-600"
+            }
           >
             <i className="fas fa-envelope-open-text text-xl  cursor-pointer"></i>{" "}
             Contact
