@@ -63,5 +63,5 @@ export const fetchApi = async (projectsUrl) => {
     (repo) => !pinned.includes(repo.projectName)
   );
   //   log("older repos are ", oldProjects);
-  return { oldProjects, favProjects };
+  return { oldProjects, favProjects, projects };
 };
