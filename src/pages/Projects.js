@@ -4,7 +4,7 @@ import Button from "@material-tailwind/react/Button";
 import OtherSkills from "../components/OtherSkills";
 const Projects = () => {
   return (
-    <div>
+    <div className="h-screen">
       Projects
       <OtherSkills />
     </div>

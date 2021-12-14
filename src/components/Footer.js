@@ -7,8 +7,7 @@ const Footer = () => {
       className="bg-blue-400
          text-3xl text-white text-center
          border-t-4 border-gray-500
-         
-         bottom-0
+     
          p-4
          "
     >

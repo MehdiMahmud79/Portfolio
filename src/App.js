@@ -14,19 +14,21 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
-      <Header />
+    <div class="flex flex-col min-h-screen">
+      <Router>
+        <Header />
 
-      <Routes>
-        <Route exact={true} path="/" element={<Home />} />
-        <Route exact={true} path="/profile" element={<Profile />} />
-        <Route exact={true} path="/contact" element={<Contact />} />
-        <Route exact={true} path="/projects" element={<Projects />} />
+        <Routes>
+          <Route exact={true} path="/" element={<Home />} />
+          <Route exact={true} path="/profile" element={<Profile />} />
+          <Route exact={true} path="/contact" element={<Contact />} />
+          <Route exact={true} path="/projects" element={<Projects />} />
 
-        {/* <Route render={() => <h1 className="display-2">Wrong page!</h1>} /> */}
-      </Routes>
-      <Footer />
-    </Router>
+          {/* <Route render={() => <h1 className="display-2">Wrong page!</h1>} /> */}
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
