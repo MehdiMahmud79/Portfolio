@@ -21,7 +21,7 @@ const Home = () => {
 
   console.log(mydata.favProjects);
   return (
-    <div className=" container mx-auto shadow-lg my-2 bg-gray-200 text-center rounded-3xl mt-4 h-100">
+    <div className=" md:container mx-auto  shadow-lg my-2 bg-gray-200 text-center rounded-3xl mt-4 h-100">
       <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center rounded-b-full">
         {/* <!-- this section is about me --> */}
         <p className="md:text-3xl ">
@@ -88,14 +88,14 @@ const Home = () => {
           <i className="fas fa-angle-double-right"></i>
         </p>
       </div>
-      <div className="flex flex-wrap justify-center bg-gray-100 m-2 p-2 rounded-xl shadow-md">
+      <div className="flex flex-wrap justify-center bg-gray-100 m-2 gap-4  p-2 rounded-xl shadow-md ">
         {loading ? (
           <div>
             <img src={spinner} alt="" />
           </div>
         ) : (
           mydata.favProjects.map((project) => {
-            return <SingleCard key={project.projectName} />;
+            return <SingleCard data={project} key={project.projectName} />;
           })
         )}
       </div>
