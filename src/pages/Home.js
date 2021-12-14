@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import profileImage from "../images/profile.jpg";
@@ -7,6 +7,55 @@ import CV from "./cv.pdf";
 
 import "./home.css";
 const Home = () => {
+  const log = console.log;
+  var projects = [];
+  var user = "MehdiMahmud79";
+  const projectsUrl = `https://api.github.com/users/${user}/repos`;
+
+  const fetchApi = async (url) => {
+    try {
+      let projectData = await fetch(url);
+      const data = await projectData.json();
+      return data;
+    } catch (err) {
+      console.error(`Error: ${err}`);
+    }
+  };
+
+  const portfolioMaker = async (projectsUrl) => {
+    const Data = await fetchApi(projectsUrl);
+    const projectsData = Data.sort((a, b) =>
+      a.created_at < b.created_at ? 1 : b.created_at < a.created_at ? -1 : 0
+    );
+    log("Your projects on Gitgub were \n", projectsData);
+    projects = await projectsData.map(
+      async ({
+        name: projectName,
+        owner,
+        description,
+        languages_url,
+        homepage,
+      }) => {
+        if (!homepage)
+          homepage = `https://${owner.login}.github.io/${projectName}/`;
+        const gitHub_Url = `${owner.html_url}/${projectName}`;
+        const project_img = `https://github.com/${owner.login}/${projectName}/blob/main/assets/screen.gif?raw=true`;
+
+        const languages = await fetchApi(languages_url);
+
+        return {
+          projectName,
+          gitHub_Url,
+          homepage,
+          description,
+          project_img,
+          languages,
+        };
+      }
+    );
+
+    projects = await Promise.all(projects);
+  };
   return (
     <div className=" container mx-auto shadow-lg my-2 bg-gray-200 text-center rounded-3xl mt-4 h-100">
       <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center">
@@ -45,18 +94,18 @@ const Home = () => {
               will be completed in November 2021.
             </p>
           </div>
-          <div className="flex-auto items-center  justify-self-center m-2">
+          <div className="relative flex-auto items-center  justify-self-center m-2">
             <Link
               target="_blank"
-              className="flex-1 px-4 py-2 bg-red-800 text-red-100 rounded-xl"
+              className="flex-1 px-4 py-2 bg-red-800 text-red-100 rounded-xl "
               to={CV}
             >
               <i
-                className="fa fa-download  text-gray-400"
+                className="fa fa-download  text-gray-400 "
                 aria-hidden="true"
               ></i>{" "}
               Higher Me
-              <span className="position-relative top-10 start-100 translate-middle  rounded-full p-1 m-2 bg-yellow-400 text-gray-800 hover:bg-red-900 hover:text-red-100">
+              <span className="absolute  bottom-0 left-90   rounded-full p-1 m-2 bg-yellow-400 text-gray-800 hover:bg-red-900 hover:text-red-100">
                 CV
               </span>
             </Link>

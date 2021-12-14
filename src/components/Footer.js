@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer
-      class="bg-blue-400
+      className="bg-blue-400
          text-3xl text-white text-center
          border-t-4 border-gray-500
          fixed
@@ -12,14 +12,14 @@ const Footer = () => {
          p-4"
     >
       <div
-        class="
+        className="
           flex
           justify-content-center justify-between
           p-4
           text-gray-800
         "
       >
-        <div class="mx-5 ">
+        <div className="mx-5 ">
           <p className="text-lg">Get connected with me on social networks:</p>
         </div>
         <div className="fs-5">
@@ -34,7 +34,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/mehdi-mahmud/"
             className="mx-4  text-decoration-none hover:text-red-600"
           >
-            <i class="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin"></i>
           </a>
           <a
             href="https://github.com/mehdimahmud79"
