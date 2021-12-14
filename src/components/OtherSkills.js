@@ -4,7 +4,7 @@ import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter";
 const OtherSkills = () => {
   return (
     <div>
-      <h1 className="text-lg m-0 my-4 text-blue-600 font-bold text-center">
+      <h1 className="md:text-3xl m-0 my-4 text-blue-600 font-bold text-center">
         <i className="fas fa-laptop-code p-2"></i>
         Other Skills:
         <span className=" text-green-600 font-bold p-2">
@@ -17,6 +17,7 @@ const OtherSkills = () => {
               "MongoDB",
               "GraphQl",
               "JWT",
+              "Apollo Server",
               "JQuery",
               "MySQL",
               "Sequelize ORM",
