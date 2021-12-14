@@ -28,6 +28,7 @@ const Home = () => {
       a.created_at < b.created_at ? 1 : b.created_at < a.created_at ? -1 : 0
     );
     log("Your projects on Gitgub were \n", projectsData);
+
     projects = await projectsData.map(
       async ({
         name: projectName,
@@ -55,7 +56,25 @@ const Home = () => {
     );
 
     projects = await Promise.all(projects);
+    log(projects);
+    // finned pinned Repos
+    const pinnedUrl = `https://gh-pinned-repos-5l2i19um3.vercel.app/?username=${user}`;
+    const pinnedRepos = await fetchApi(pinnedUrl);
+    // log("pinned repos are ",pinnedRepos)
+    const pinned = pinnedRepos.map((proj) => proj.repo);
+
+    let favProject = projects.filter((repo) =>
+      pinned.includes(repo.projectName)
+    );
+    log("pinned repos are ", favProject);
+
+    let oldProjects = projects.filter(
+      (repo) => !pinned.includes(repo.projectName)
+    );
+    log("older repos are ", oldProjects);
   };
+  portfolioMaker(projectsUrl);
+ 
   return (
     <div className=" container mx-auto shadow-lg my-2 bg-gray-200 text-center rounded-3xl mt-4 h-100">
       <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center">
