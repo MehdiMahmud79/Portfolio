@@ -2,7 +2,7 @@
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
-  "hopepage": "https://mehdimahmud79.github.io/professional-portfolio-v2/",
+  "homepage": "https://mehdimahmud79.github.io/professional-portfolio-v2/",
   "dependencies": {
     "@material-tailwind/react": "0.3.4",
     "@testing-library/jest-dom": "^5.16.1",
