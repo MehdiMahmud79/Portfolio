@@ -1,8 +1,8 @@
 import React from "react";
-import "./home.css";
 
 import About from "../components/About";
 import Projects from "../components/Projects";
+
 const Home = ({ mydata, loading }) => {
   return (
     <div className=" md:container mx-auto  shadow-sm  text-center rounded-3xl  ">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 
 const Skills = () => {
   return (

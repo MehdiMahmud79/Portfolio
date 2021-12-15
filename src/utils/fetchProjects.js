@@ -1,5 +1,4 @@
-const log = console.log;
-var user = "MehdiMahmud79";
+// const log = console.log;
 
 export const fetchProjects = async (url) => {
   try {
@@ -13,6 +12,7 @@ export const fetchProjects = async (url) => {
 
 export const fetchApi = async (projectsUrl) => {
   var projects = [];
+  const user = "MehdiMahmud79";
 
   const Data = await fetchProjects(projectsUrl);
   const projectsData = Data.sort((a, b) =>

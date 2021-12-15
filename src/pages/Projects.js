@@ -1,7 +1,6 @@
 import React from "react";
 import spinner from "../images/spinner.gif";
 import SingleCard from "../components/SingleCard";
-import "./home.css";
 
 import OtherSkills from "../components/OtherSkills";
 

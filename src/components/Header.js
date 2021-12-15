@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Ticker from "react-ticker";
-import { fetchApi } from "../utils/fetchProjects";
 
 const Header = ({ mydata }) => {
   const [myProjects, setMyProjects] = useState([]);
