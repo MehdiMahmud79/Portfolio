@@ -30,7 +30,7 @@ export default function MainNavbar() {
       <NavbarCollapse open={openNavbar}>
         <Nav rightSide>
           <NavLink
-            exact="true"
+            // exact="true"
             to="/"
             className={({ isActive }) => (isActive ? "active" : "not-active")}
           >
@@ -45,7 +45,7 @@ export default function MainNavbar() {
             Projects
           </NavLink>
           <NavLink
-            exact="true"
+            // exact="true"
             to="/contact"
             className={({ isActive }) => (isActive ? "active" : "not-active")}
           >
