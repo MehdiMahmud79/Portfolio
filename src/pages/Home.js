@@ -1,25 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import profileImage from "../images/profile.jpg";
 import Skills from "../components/Skills";
 import CV from "./cv.pdf";
-import { fetchApi } from "../utils/fetchProjects";
 import SingleCard from "../components/SingleCard";
 import "./home.css";
 import spinner from "../images/spinner.gif";
 
-const Home = () => {
-  const projectsUrl = `https://api.github.com/users/MehdiMahmud79/repos`;
-  const [mydata, setdata] = useState([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(async () => {
-    const data = await fetchApi(projectsUrl);
-    setdata(data);
-    setLoading(false);
-  }, []);
-
-  console.log(mydata.favProjects);
+const Home = ({ mydata, loading }) => {
   return (
     <div className=" md:container mx-auto  shadow-sm  text-center rounded-3xl  ">
       <div className="md:text-xl  bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center rounded-b-full">

@@ -3,25 +3,17 @@ import Navbar from "./Navbar";
 import Ticker from "react-ticker";
 import { fetchApi } from "../utils/fetchProjects";
 
-const Header = () => {
-  const projectsUrl = `https://api.github.com/users/MehdiMahmud79/repos`;
-  const [mydata, setdata] = useState([" "]);
+const Header = ({ mydata }) => {
   const [myProjects, setMyProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
-    const data = await fetchApi(projectsUrl);
-
-    setdata(data);
-    setLoading(false);
     if (!mydata) return;
     // console.log("all", mydata.projects);
     const Projects = mydata.projects.map((project) => {
       return project.projectName + " | " + project.created_at.split("T")[0];
     });
     setMyProjects(Projects);
-  }, [loading]);
-  console.log("my pro", myProjects);
+  }, [mydata]);
   return (
     <>
       <Navbar />

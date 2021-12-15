@@ -1,21 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import spinner from "../images/spinner.gif";
 import SingleCard from "../components/SingleCard";
 import "./home.css";
-import { fetchApi } from "../utils/fetchProjects";
 
 import OtherSkills from "../components/OtherSkills";
-const Projects = () => {
-  const projectsUrl = `https://api.github.com/users/MehdiMahmud79/repos`;
-  const [mydata, setdata] = useState([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(async () => {
-    const data = await fetchApi(projectsUrl);
-    setdata(data);
-    setLoading(false);
-  }, []);
 
+const Projects = ({ mydata, loading }) => {
   return (
     <div className="">
       <div className="md:text-xl  bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center  rounded-b-full">
