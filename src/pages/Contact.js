@@ -2,7 +2,7 @@ import React from "react";
 import contactUs from "../images/contact-us.jpg";
 const Contact = () => {
   return (
-    <div className="h-screen bg-gradient-to-t from-gray-900 to-gray-100 ">
+    <div className="h-screen bg-gradient-to-t from-gray-900 to-gray-100">
       <div className="container grid mx-auto bg-gray-200 rounded-xl ">
         <div className="md:text-xl  bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center my-10 mt-0 rounded-b-full">
           {/* <!-- this section is about me --> */}
@@ -18,47 +18,49 @@ const Contact = () => {
             <i className="fas fa-angle-double-down"></i>{" "}
           </p>
         </div>{" "}
-        <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2 ">
-          <i className="fas fa-at  "> </i> Email:{" "}
-          <a
-            href="mailto:mehdi.mahmud@hotmail.com "
-            className="text-yellow-600"
-            target="_blank"
-          >
-            mehdi.mahmud@hotmail.com
-          </a>
-        </div>
-        <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
-          <i className="fab fa-github  "> </i> Github:{" "}
-          <a
-            href="https://github.com/mehdimahmud79"
-            className="text-yellow-600"
-            target="_blank"
-          >
-            mehdimahmud79
-          </a>
-        </div>
-        <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
-          <i className="fab fa-linkedin  "> </i> Linkedin:{" "}
-          <a
-            href="https://www.linkedin.com/in/mehdi-mahmud/"
-            className="text-yellow-600"
-            target="_blank"
-          >
-            mehdi-mahmud
-          </a>
-        </div>
-        <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
-          <i className="fab fa-researchgate"> </i> ResearchGate:{" "}
-          <a
-            href="https://www.researchgate.net/profile/Mehdi-Mahmud"
-            className="text-yellow-600"
-          >
-            mehdi-mahmud
-          </a>
-        </div>
-        <div className="opacity-20">
-          <img src={contactUs} className="w-full" alt="logo" />
+        <div className="grid gap-4 p-4 m-4">
+          <div className=" bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2 ">
+            <i className="fas fa-at  "> </i> Email:{" "}
+            <a
+              href="mailto:mehdi.mahmud@hotmail.com "
+              className="text-yellow-600"
+              target="_blank"
+            >
+              mehdi.mahmud@hotmail.com
+            </a>
+          </div>
+          <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
+            <i className="fab fa-github  "> </i> Github:{" "}
+            <a
+              href="https://github.com/mehdimahmud79"
+              className="text-yellow-600"
+              target="_blank"
+            >
+              mehdimahmud79
+            </a>
+          </div>
+          <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
+            <i className="fab fa-linkedin  "> </i> Linkedin:{" "}
+            <a
+              href="https://www.linkedin.com/in/mehdi-mahmud/"
+              className="text-yellow-600"
+              target="_blank"
+            >
+              mehdi-mahmud
+            </a>
+          </div>
+          <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
+            <i className="fab fa-researchgate"> </i> ResearchGate:{" "}
+            <a
+              href="https://www.researchgate.net/profile/Mehdi-Mahmud"
+              className="text-yellow-600"
+            >
+              mehdi-mahmud
+            </a>
+          </div>
+          <div className="opacity-20 ">
+            <img src={contactUs} className="w-full h-100" alt="logo" />
+          </div>
         </div>
       </div>
     </div>
