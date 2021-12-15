@@ -31,18 +31,16 @@ function App() {
 
         <Routes>
           <Route
-            exact={true}
             path="/"
             element={<Home mydata={mydata} loading={loading} />}
           />
           <Route
-            exact={true}
             path="/projects"
             element={<Projects mydata={mydata} loading={loading} />}
           />
-          <Route exact={true} path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
 
-          {/* <Route render={() => <h1 className="display-2">Wrong page!</h1>} /> */}
+          <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
         </Routes>
         <Footer />
       </Router>
