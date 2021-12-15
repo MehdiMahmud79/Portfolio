@@ -31,14 +31,20 @@ function App() {
 
         <Routes>
           <Route
-            path="/"
+            exact="true"
+            path="/professional-portfolio-v2"
             element={<Home mydata={mydata} loading={loading} />}
           />
           <Route
-            path="/projects"
+            exact="true"
+            path="/professional-portfolio-v2/projects"
             element={<Projects mydata={mydata} loading={loading} />}
           />
-          <Route path="/contact" element={<Contact />} />
+          <Route
+            exact="true"
+            path="/professional-portfolio-v2/contact"
+            element={<Contact />}
+          />
 
           <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
         </Routes>
