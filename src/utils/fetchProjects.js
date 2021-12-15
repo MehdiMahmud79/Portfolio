@@ -51,7 +51,7 @@ export const fetchApi = async (projectsUrl) => {
   projects = await Promise.all(projects);
   //   log(projects);
   // finned pinned Repos
-  const pinnedUrl = `https://gh-pinned-repos-5l2i19um3.vercel.app/?username=${user}`;
+  const pinnedUrl = `https://gh-pinned-repos-5l2i19um3.vercel.app/?username=${user}/`;
   const pinnedRepos = await fetchProjects(pinnedUrl);
   // log("pinned repos are ",pinnedRepos)
   const pinned = pinnedRepos.map((proj) => proj.repo);
