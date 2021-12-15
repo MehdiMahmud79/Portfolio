@@ -21,8 +21,8 @@ const Home = () => {
 
   console.log(mydata.favProjects);
   return (
-    <div className=" md:container mx-auto  shadow-sm my-2  text-center rounded-3xl mt-4  ">
-      <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center rounded-b-full">
+    <div className=" md:container mx-auto  shadow-sm  text-center rounded-3xl  ">
+      <div className="md:text-xl  bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center rounded-b-full">
         {/* <!-- this section is about me --> */}
         <p className="md:text-3xl ">
           <i className="fas fa-user-graduate text-gray-700 px-2"></i>
@@ -30,7 +30,7 @@ const Home = () => {
         </p>
         <hr className="w-48 m-auto" />
         <p className="md:text-lg  text-center text-gray-700 pt-2">
-          <i className="fas fa-angle-double-left"></i> who I'm{" "}
+          <i className="fas fa-angle-double-left"></i> who am I?{" "}
           <i className="fas fa-angle-double-right"></i>
         </p>
       </div>
@@ -52,8 +52,8 @@ const Home = () => {
               debugging procedures. Full-stack developer with a passion for
               coding and problem solving situated in Birmingham. I hold a PhD in
               applied mathematics from the University of Birmingham and since
-              2001, I have been experienced in doing research, teaching, IT, and
-              video editing. Currently expanding my expertise by enrolling in an
+              2001, I have experience in research, teaching, IT, and video
+              editing. Currently expanding my expertise by enrolling in an
               intense Full-Stack Bootcamp at the University of Birmingham, which
               will be completed in November 2021.
             </p>
@@ -76,18 +76,19 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center my-10 rounded-b-full">
-        {/* <!-- this section is about me --> */}
+      <div className="md:text-xl  bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center my-10 rounded-b-full">
         <p className="md:text-3xl ">
           <i className="fas fa-user-graduate text-gray-700 px-2"></i>
           Projects
         </p>
+
         <hr className="w-48 m-auto" />
         <p className="md:text-lg  text-center text-gray-700 pt-2">
           <i className="fas fa-angle-double-left"></i> Recent Projects{" "}
           <i className="fas fa-angle-double-right"></i>
         </p>
       </div>
+
       <div className="flex flex-wrap justify-center bg-gray-100  gap-4  p-2 rounded-xl shadow-md my-10 ">
         {loading ? (
           <div>

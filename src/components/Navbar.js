@@ -16,7 +16,7 @@ export default function MainNavbar() {
   const [openNavbar, setOpenNavbar] = useState(false);
 
   return (
-    <Navbar className="bg-blue-100">
+    <Navbar className="bg-gradient-to-r from-gray-100 to-gray-900 ">
       <NavbarWrapper>
         <NavbarBrand>
           <img src={logo} className="w-48" alt="logo" />

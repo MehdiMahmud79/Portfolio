@@ -43,7 +43,7 @@ const SingleCard = ({ data }) => {
             href={data.homepage}
             className=" text-decoration-none hover:text-red-600 "
           >
-            <i className="fab fa-internet-explorer"></i> Live
+            <i className="fab fa-edge"></i> Live
           </a>
         </div>
       </div>

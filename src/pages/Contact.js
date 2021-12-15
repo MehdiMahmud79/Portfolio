@@ -3,11 +3,11 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="h-screen">
-      <div className="container grid mx-auto bg-gray-200 rounded-xl m-4">
-        <div className="md:text-xl  bg-yellow-600 p-2 text-blue-700 font-bold text-center my-10 mt-0 rounded-b-full">
+      <div className="container grid mx-auto bg-gray-200 rounded-xl ">
+        <div className="md:text-xl  bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center my-10 mt-0 rounded-b-full">
           {/* <!-- this section is about me --> */}
           <p className="md:text-3xl ">
-            <i className="fas fa-user-graduate text-gray-700 px-2"></i>
+            <i className="far fa-comments text-gray-700 px-2"></i>
             Let's Talk
           </p>
           <hr className="w-48 m-auto" />
