@@ -31,7 +31,7 @@ export default function MainNavbar() {
         <Nav rightSide>
           <NavLink
             exact="true"
-            to="/"
+            to="/professional-portfolio-v2"
             className={({ isActive }) => (isActive ? "active" : "not-active")}
           >
             <i className="fas fa-user text-xl  cursor-pointer"></i> Profile
@@ -39,7 +39,7 @@ export default function MainNavbar() {
 
           <NavLink
             exact="true"
-            to="/projects"
+            to="/professional-portfolio-v2/projects"
             className={({ isActive }) => (isActive ? "active" : "not-active")}
           >
             <i className="fas fa-laptop-code text-xl  cursor-pointer"></i>{" "}
@@ -47,7 +47,7 @@ export default function MainNavbar() {
           </NavLink>
           <NavLink
             exact="true"
-            to="/contact"
+            to="/professional-portfolio-v2/contact"
             className={({ isActive }) => (isActive ? "active" : "not-active")}
           >
             <i className="fas fa-envelope-open-text text-xl  cursor-pointer"></i>{" "}
