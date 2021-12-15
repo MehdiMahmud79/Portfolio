@@ -17,7 +17,11 @@ const SingleCard = ({ data }) => {
         </div>
         <div>
           <h2 className="text-gray-800 text-xl font-semibold">
-            {data.projectName}
+            {data.projectName} |{" "}
+            <i className="far fa-calendar-times text-green-800"> </i>{" "}
+            <span className="font-mono text-blue-800">
+              {data.created_at.split("T")[0]}{" "}
+            </span>
           </h2>
           <p className="mt-2 text-gray-800">{data.description}</p>
         </div>
