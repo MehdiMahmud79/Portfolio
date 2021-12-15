@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      className="bg-blue-400
+      className="bg-gradient-to-r from-gray-100 to-gray-900 static
          text-3xl text-white text-center
          border-t-4 border-gray-500
      
@@ -16,11 +16,13 @@ const Footer = () => {
           flex
           justify-content-center justify-between
           p-4
-          text-gray-800
+          text-gray-100
         "
       >
         <div className="mx-5 ">
-          <p className="text-lg">Get connected with me on social networks:</p>
+          <h1 className="text-xl text-gray-800">
+            Get connected with me on social networks:
+          </h1>
         </div>
         <div className="text-3xl">
           <a
