@@ -5,9 +5,9 @@ import Ticker from "react-ticker";
 const Header = ({ mydata }) => {
   const [myProjects, setMyProjects] = useState([]);
 
-  useEffect(async () => {
-    if (!mydata) return;
-    // console.log("all", mydata.projects);
+  useEffect(() => {
+    // if (!mydata) return;
+    console.log("all", mydata.projects);
     const Projects = mydata.projects.map((project) => {
       return project.projectName + " | " + project.created_at.split("T")[0];
     });

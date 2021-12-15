@@ -15,13 +15,13 @@ import { fetchApi } from "./utils/fetchProjects";
 
 function App() {
   const projectsUrl = `https://api.github.com/users/MehdiMahmud79/repos`;
-  const [mydata, setdata] = useState([]);
+  const [mydata, setdata] = useState({ projects: [] });
   const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
     const data = await fetchApi(projectsUrl);
-    setdata(data);
-    setLoading(false);
+    if (data) setdata(data);
+    if (data) setLoading(false);
   }, [loading]);
 
   return (
