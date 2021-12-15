@@ -39,18 +39,7 @@ export default function MainNavbar() {
                 : " hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-blue-200 p-2 px-4 shadow-lg mx-2"
             }
           >
-            <i className="fas fa-home text-xl  cursor-pointer"></i> Home
-          </NavLink>
-          <NavLink
-            exact="true"
-            to="/profile"
-            className={({ isActive }) =>
-              isActive
-                ? "text-blue-100 font-bold p-2 px-4 mx-2 hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-green-600 shadow-lg"
-                : " hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-blue-200 p-2 px-4 shadow-lg mx-2"
-            }
-          >
-            <i className="fas fa-user text-xl cursor-pointer"></i> Profile
+            <i className="fas fa-user text-xl  cursor-pointer"></i> Profile
           </NavLink>
 
           <NavLink
