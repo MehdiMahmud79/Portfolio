@@ -22,7 +22,7 @@ const SingleCard = ({ data }) => {
           <p className="mt-2 text-gray-800">{data.description}</p>
         </div>
 
-        <div className="absolute top-0 left-0 w-full bg-blue-900   text-blue-200 flex justify-between px-4 py-1 rounded-t-3xl ">
+        <div className="absolute top-0 left-0 w-full bg-gradient-to-b from-gray-900 to-blue-400   text-blue-200 flex justify-between px-4 py-1 rounded-t-3xl ">
           <a
             target="_blank"
             type="button"
