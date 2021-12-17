@@ -11,6 +11,7 @@ export const fetchProjects = async (url) => {
 };
 
 export const fetchApi = async (projectsUrl) => {
+  console.log("github Api called");
   var projects = [];
   const user = "MehdiMahmud79";
 

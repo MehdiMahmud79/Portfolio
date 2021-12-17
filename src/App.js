@@ -10,22 +10,24 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
-
+import { initialProjects } from "./utils/initialProjects";
 import { fetchApi } from "./utils/fetchProjects";
 
 function App() {
   const projectsUrl = `https://api.github.com/users/MehdiMahmud79/repos`;
-  const [mydata, setdata] = useState({ projects: [] });
+  const [mydata, setdata] = useState(initialProjects);
   const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
-    if (mydata.projects.length > 1) return;
-    
+    if (mydata.projects.length >= initialProjects.projects.length) {
+      setLoading(false);
+      return;
+    }
+
     const data = await fetchApi(projectsUrl);
     if (data) setdata(data);
     if (data) setLoading(false);
-  }, [loading]);
-
+  }, []);
   return (
     <div className="flex flex-col min-h-screen">
       <Router>
