@@ -46,11 +46,11 @@ const About = () => {
           <div className="relative flex-auto items-center  justify-self-center m-2">
             <Link
               target="_blank"
-              className="flex-1 px-4 py-2 bg-red-800 text-red-100 rounded-xl "
+              className="flex-1 px-4 py-2 bg-red-800 text-red-100 rounded-xl hover:bg-green-500  hover:text-red-900 "
               to={CV}
             >
               <i
-                className="fa fa-download  text-gray-400 "
+                className="fa fa-download  text-gray-400  "
                 aria-hidden="true"
               ></i>{" "}
               Higher Me

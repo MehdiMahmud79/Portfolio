@@ -31,7 +31,7 @@ export default function MainNavbar() {
         <Nav rightSide>
           <NavLink
             exact="true"
-            to="/professional-portfolio-v2"
+            to="/professional-portfolio-v2/"
             className={({ isActive }) => (isActive ? "active" : "not-active")}
           >
             <i className="fas fa-user text-xl  cursor-pointer"></i> Profile
