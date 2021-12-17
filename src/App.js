@@ -19,6 +19,8 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
+    if (mydata.projects.length > 1) return;
+    
     const data = await fetchApi(projectsUrl);
     if (data) setdata(data);
     if (data) setLoading(false);
