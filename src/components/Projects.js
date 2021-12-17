@@ -13,7 +13,7 @@ const Projects = ({ mydata, loading }) => {
 
         <hr className="w-48 m-auto" />
         <p className="md:text-lg  text-center text-gray-700 pt-2">
-          <i className="fas fa-angle-double-left"></i> Recent Projects{" "}
+          <i className="fas fa-angle-double-left"></i> Favourite Projects
           <i className="fas fa-angle-double-right"></i>
         </p>
       </div>
