@@ -19,6 +19,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
+    // if there is no new projects to the initial projects dont call the Api to save the Limit reuqest
     if (mydata.projects.length >= initialProjects.projects.length) {
       setLoading(false);
       return;

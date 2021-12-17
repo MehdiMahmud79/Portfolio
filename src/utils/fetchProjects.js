@@ -16,9 +16,7 @@ export const fetchApi = async (projectsUrl) => {
   const user = "MehdiMahmud79";
 
   const Data = await fetchProjects(projectsUrl);
-  const projectsData = Data.sort((a, b) =>
-    a.created_at < b.created_at ? 1 : b.created_at < a.created_at ? -1 : 0
-  );
+  const projectsData = Data.sort((a, b) => a.created_at - b.created_at);
   // log("Your projects on Gitgub were \n", projectsData);
 
   projects = await projectsData.map(
@@ -27,7 +25,7 @@ export const fetchApi = async (projectsUrl) => {
       created_at,
       owner,
       description,
-      languages_url,
+      // languages_url,
       homepage,
     }) => {
       if (!homepage)
@@ -35,7 +33,7 @@ export const fetchApi = async (projectsUrl) => {
       const gitHub_Url = `${owner.html_url}/${projectName}`;
       const project_img = `https://github.com/${owner.login}/${projectName}/blob/main/assets/screen.gif?raw=true`;
 
-      const languages = await fetchProjects(languages_url);
+      // const languages = await fetchProjects(languages_url);
 
       return {
         projectName,
@@ -44,7 +42,7 @@ export const fetchApi = async (projectsUrl) => {
         homepage,
         description,
         project_img,
-        languages,
+        // languages,
       };
     }
   );
