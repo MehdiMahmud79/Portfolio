@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div>
-      <div className="md:text-xl  bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center rounded-b-full">
+    <div className="container ">
+      <div className="md:text-xl bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center rounded-b-full">
         {/* <!-- this section is about me --> */}
         <p className="md:text-3xl ">
           <i className="fas fa-user-graduate text-gray-700 px-2"></i>
@@ -22,7 +22,7 @@ const About = () => {
 
       <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  items-center  justify-self-center">
         <img
-          className="m-2 rounded-3xl  p-1 col-span-1  outline outline-1  outline-offset-1 outline-yellow-500 auto-cols-max"
+          className="m-2 w-80 mx-auto mt-6 rounded-3xl  p-1 col-span-1  outline outline-1  outline-offset-1 outline-yellow-500 auto-cols-max"
           src={profileImage}
           alt="my photo"
         />

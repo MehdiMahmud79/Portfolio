@@ -5,7 +5,7 @@ import Projects from "../components/Projects";
 
 const Home = ({ mydata, loading }) => {
   return (
-    <div className=" md:container mx-auto  shadow-sm  text-center rounded-3xl  ">
+    <div className=" container mx-auto  shadow-sm  text-center rounded-3xl  ">
       <About />
       <Projects mydata={mydata} loading={loading} />
     </div>
