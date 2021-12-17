@@ -5,5 +5,5 @@
     @apply text-blue-100 font-bold p-2 px-4 mx-2 hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-green-600 shadow-lg shadow-green-500 ;
 }
 .not-active{
-    @apply hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-blue-200 p-2 px-4 shadow-lg mx-2 shadow-blue-500;
+    @apply hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-blue-200 p-2 px-4 shadow-lg mx-2 ;
 }

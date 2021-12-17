@@ -28,9 +28,9 @@ function App() {
     const data = await fetchApi(projectsUrl);
     if (data) setdata(data);
     if (data) setLoading(false);
-  }, []);
+  }, [loading]);
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <Router>
         <Header mydata={mydata} />
 
