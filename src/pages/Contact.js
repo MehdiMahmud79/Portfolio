@@ -1,9 +1,10 @@
 import React from "react";
 import contactUs from "../images/contact-us.jpg";
+import ContactCard from "../components/ContactCard";
 const Contact = () => {
   return (
-    <div className="h-screen bg-gradient-to-t from-gray-900 to-gray-100">
-      <div className="container grid mx-auto bg-gray-200 rounded-xl ">
+    <div className="h-screen bg-gradient-to-t from-gray-900 to-gray-100 static">
+      <div className="container  mx-auto bg-gray-200 rounded-xl ">
         <div className="md:text-xl  bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center my-10 mt-0 rounded-b-full">
           {/* <!-- this section is about me --> */}
           <p className="md:text-3xl ">
@@ -11,57 +12,39 @@ const Contact = () => {
             Let's Talk
           </p>
           <hr className="w-48 m-auto" />
-          <p className="md:text-lg  text-center text-gray-700 pt-2">
-            <i className="fas fa-angle-double-down"></i>{" "}
-            <i className="fas fa-angle-double-down"></i>{" "}
-            <i className="fas fa-angle-double-down"></i>{" "}
-            <i className="fas fa-angle-double-down"></i>{" "}
-          </p>
         </div>{" "}
-        <div className="grid gap-4 p-4 m-4">
-          <div className=" bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2 ">
-            <i className="fas fa-at  "> </i> Email:{" "}
-            <a
-              href="mailto:mehdi.mahmud@hotmail.com "
-              className="text-yellow-600"
-              target="_blank"
-            >
-              mehdi.mahmud@hotmail.com
-            </a>
-          </div>
-          <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
-            <i className="fab fa-github  "> </i> Github:{" "}
-            <a
-              href="https://github.com/mehdimahmud79"
-              className="text-yellow-600"
-              target="_blank"
-            >
-              mehdimahmud79
-            </a>
-          </div>
-          <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
-            <i className="fab fa-linkedin  "> </i> Linkedin:{" "}
-            <a
-              href="https://www.linkedin.com/in/mehdi-mahmud/"
-              className="text-yellow-600"
-              target="_blank"
-            >
-              mehdi-mahmud
-            </a>
-          </div>
-          <div className="bg-gradient-to-r from-gray-900 to-gray-100 rounded-xl text-xl text-gray-100 p-2 m-2">
-            <i className="fab fa-researchgate"> </i> ResearchGate:{" "}
-            <a
-              href="https://www.researchgate.net/profile/Mehdi-Mahmud"
-              className="text-yellow-600"
-            >
-              mehdi-mahmud
-            </a>
-          </div>
-          <div className="opacity-20 ">
-            <img src={contactUs} className="w-full h-100" alt="logo" />
-          </div>
-        </div>
+      </div>{" "}
+      <div className="flex flex-wrap gap-4">
+        <ContactCard
+          title="Email"
+          icon={"fas fa-at text-3xl p-2 text-green-600 "}
+          content={"mehdi.mahmud@hotmail.com"}
+          hrefTo={"mailto:mehdi.mahmud@hotmail.com "}
+        />
+        <ContactCard
+          title="Github"
+          icon={"fab fa-github  text-3xl p-2 text-green-600 "}
+          content={"mehdimahmud79"}
+          hrefTo={"https://github.com/mehdimahmud79"}
+        />
+        <ContactCard
+          title="Linkedin"
+          icon={"fab fa-linkedin  text-3xl p-2 text-green-600 "}
+          content={"mehdi-mahmud"}
+          hrefTo={"https://www.linkedin.com/in/mehdi-mahmud/"}
+        />
+        <ContactCard
+          title="ResearchGate"
+          icon={"fab fa-researchgate  text-3xl p-2 text-green-600 "}
+          content={"mehdi-mahmud"}
+          hrefTo={"https://www.researchgate.net/profile/Mehdi-Mahmud"}
+        />
+        <ContactCard
+          title="Mobile"
+          icon={"fas fa-phone-alt  text-3xl p-2 text-green-600 "}
+          content={+447511118806}
+          hrefTo={""}
+        />
       </div>
     </div>
   );

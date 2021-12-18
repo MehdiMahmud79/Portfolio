@@ -7,3 +7,10 @@
 .not-active{
     @apply hover:text-blue-500 hover:bg-blue-200 rounded-3xl bg-blue-200 p-2 px-4 shadow-lg mx-2 ;
 }
+.conta_ctcard{
+    @apply max-w-md py-4 mx-auto my-20  bg-green-100  font-bold p-2 px-4 rounded-3xl shadow-xl shadow-green-500/80 ;
+}
+.test{
+    background-image: url(../images/contact-us.jpg) ;
+    
+}

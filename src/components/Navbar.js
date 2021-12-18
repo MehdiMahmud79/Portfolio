@@ -8,7 +8,7 @@ import NavbarToggler from "@material-tailwind/react/NavbarToggler";
 import NavbarCollapse from "@material-tailwind/react/NavbarCollapse";
 import Nav from "@material-tailwind/react/Nav";
 
-import "./nav.css";
+import "./style.css";
 import logo from "../images/logo.png";
 
 export default function MainNavbar() {
