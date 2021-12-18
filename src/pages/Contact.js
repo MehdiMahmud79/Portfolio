@@ -3,7 +3,7 @@ import contactUs from "../images/contact-us.jpg";
 import ContactCard from "../components/ContactCard";
 const Contact = () => {
   return (
-    <div className="h-screen bg-gradient-to-t from-gray-900 to-gray-100 static">
+    <div className="min-h-screen bg-gradient-to-t from-gray-900 to-gray-100 static">
       <div className="container  mx-auto bg-gray-200 rounded-xl ">
         <div className="md:text-xl  bg-gradient-to-b from-green-500 to-green-100 p-2 text-blue-700 font-bold text-center my-10 mt-0 rounded-b-full">
           {/* <!-- this section is about me --> */}
