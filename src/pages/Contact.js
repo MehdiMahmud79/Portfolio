@@ -14,7 +14,7 @@ const Contact = () => {
           <hr className="w-48 m-auto" />
         </div>{" "}
       </div>{" "}
-      <div className="md:flex md:justify-items-stretch  m-2 flex-wrap gap-2 place-content-center">
+      <div className="md:flex m-2 flex-wrap gap-2 ">
         <ContactCard
           title="Email"
           icon={"fas fa-at text-3xl p-2 text-green-600 "}
