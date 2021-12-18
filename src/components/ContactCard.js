@@ -4,7 +4,7 @@ import "./style.css";
 
 const ContactCard = ({ title, icon, content, hrefTo }) => {
   return (
-    <div className=" conta_ctcard ">
+    <div className=" conta_ctcard  ">
       <div className="flex justify-center md:justify-end   -mt-14 ">
         <img
           className="w-24 h-24object-cover rounded-full border-2 border-gray-500 p-2 "
@@ -24,7 +24,7 @@ const ContactCard = ({ title, icon, content, hrefTo }) => {
           target="_blank"
           type="button"
           href={hrefTo}
-          className="text-xl font-medium text-indigo-500"
+          className="md:text-xl font-medium text-indigo-500"
         >
           {hrefTo}
         </a>
