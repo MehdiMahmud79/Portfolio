@@ -3,9 +3,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![badmath](https://img.shields.io/github/issues/MehdiMahmud79/professional-portfolio-v2)
-![badmath](https://img.shields.io/github/forks/MehdiMahmud79/professional-portfolio-v2)
-![badmath](https://img.shields.io/github/stars/MehdiMahmud79/professional-portfolio-v2)
+![badmath](https://img.shields.io/github/issues/MehdiMahmud79/portfolio)
+![badmath](https://img.shields.io/github/forks/MehdiMahmud79/portfolio)
+![badmath](https://img.shields.io/github/stars/MehdiMahmud79/portfolio)
 
 # React Portfolio
 
@@ -54,6 +54,6 @@ npm run start
 
 ## WebPages
 
-- the URL to Live : https://mehdimahmud79.github.io/professional-portfolio-v2/
+- the URL to Live : https://mehdimahmud79.github.io/portfolio/
 
-- the URL to the Github repository: https://github.com/MehdiMahmud79/professional-portfolio-v2
+- the URL to the Github repository: https://github.com/MehdiMahmud79/portfolio

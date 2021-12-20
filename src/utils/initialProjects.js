@@ -174,14 +174,14 @@ export const initialProjects = {
   ],
   favProjects: [
     {
-      projectName: "professional-portfolio-v2",
+      projectName: "portfolio",
       created_at: "2021-12-12T12:29:16Z",
-      gitHub_Url: "https://github.com/MehdiMahmud79/professional-portfolio-v2",
-      homepage: "https://mehdimahmud79.github.io/professional-portfolio-v2/",
+      gitHub_Url: "https://github.com/MehdiMahmud79/portfolio",
+      homepage: "https://mehdimahmud79.github.io/portfolio/",
       description:
         "using react to create a proffesional portfolio which is linked to github Api to have an updated project list",
       project_img:
-        "https://github.com/MehdiMahmud79/professional-portfolio-v2/blob/main/assets/screen.gif?raw=true",
+        "https://github.com/MehdiMahmud79/portfolio/blob/main/assets/screen.gif?raw=true",
       languages: {
         JavaScript: 21665,
         HTML: 2417,
@@ -266,14 +266,14 @@ export const initialProjects = {
   ],
   projects: [
     {
-      projectName: "professional-portfolio-v2",
+      projectName: "portfolio",
       created_at: "2021-12-12T12:29:16Z",
-      gitHub_Url: "https://github.com/MehdiMahmud79/professional-portfolio-v2",
-      homepage: "https://mehdimahmud79.github.io/professional-portfolio-v2/",
+      gitHub_Url: "https://github.com/MehdiMahmud79/portfolio",
+      homepage: "https://mehdimahmud79.github.io/portfolio/",
       description:
         "using react to create a proffesional portfolio which is linked to github Api to have an updated project list",
       project_img:
-        "https://github.com/MehdiMahmud79/professional-portfolio-v2/blob/main/assets/screen.gif?raw=true",
+        "https://github.com/MehdiMahmud79/portfolio/blob/main/assets/screen.gif?raw=true",
       languages: {
         JavaScript: 21665,
         HTML: 2417,
