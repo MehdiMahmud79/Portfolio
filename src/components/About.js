@@ -32,15 +32,22 @@ const About = () => {
           </h1>{" "}
           <div className=" m-2 md:text-2xl font-sans  text-justify md:leading-10 ">
             <p className="p-4">
-              A skilled programmer can adapt to all stages of advanced
-              programming. Capable of coding, user interface, testing, and
-              debugging procedures. Full-stack developer with a passion for
-              coding and problem solving situated in Birmingham. I hold a PhD in
-              applied mathematics from the University of Birmingham and since
-              2001, I have experience in research, teaching, IT, and video
-              editing. Currently expanding my expertise by enrolling in an
-              intense Full-Stack Bootcamp at the University of Birmingham, which
-              will be completed in November 2021.
+              Full-stack web developer and scientific researcher with a passion
+              for coding and problem solving situated in Birmingham. As a
+              skilled programmer, I can adapt to all stages of advanced
+              programming. I am confident in my technical skills which range
+              from coding and user interface to testing and debugging
+              procedures. I hold a PhD in Applied Mathematics from the
+              University of Birmingham and since 2000 I have gained experience
+              in several different domains which include academic research,
+              lecturing, IT, and professional video editing. More recently, I
+              completed an intense Full-Stack Web Developer Bootcamp at the
+              University of Birmingham, which I completed in November 2021
+              having obtained an overall grade of A+.
+            </p>
+            <p className="font-bold shadow-lg p-4 rounded-lg bg-gray-100">
+              I look forward to offering my skills as a Full Stack web developer
+              in the future as part of a fast-paced yet quality-driven team.
             </p>
           </div>
           <div className="relative flex-auto items-center  justify-self-center m-2">
